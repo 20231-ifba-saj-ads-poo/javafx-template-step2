@@ -9,15 +9,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 
 public class CadAutorController {
-
-    @FXML
-    private TextField txCPF;
-
-    @FXML
-    private TextField txEmail;
-
     @FXML
     private TextField txNome;
+    @FXML
+    private TextField txEmail;
+    @FXML
+    private TextField txCPF;
 
     @FXML
     private void salvarAutor() {

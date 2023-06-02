@@ -14,8 +14,8 @@ import javafx.stage.Stage;
  * JavaFX App
  */
 public class App extends Application {
-    
-    private static Scene scene;    
+
+    private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,22 +26,23 @@ public class App extends Application {
     }
 
     public static void setRoot(String fxml) {
+        scene.setRoot(loadFXML(fxml));
+    }
+
+    public static Parent loadFXML(String fxml) {
         try {
-            scene.setRoot(loadFXML(fxml));
+            FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml));
+            Parent parent = loader.load();
+            Object controller = loader.getController();
+            if (controller != null) {
+                parent.getProperties().put("controller", loader.getController());
+            }
+            return parent;
         } catch (Exception e) {
             new Alert(AlertType.ERROR, "Erro ao carregar o arquivo " + fxml).show();
             e.printStackTrace();
+            return null;
         }
-    }
-
-    private static Parent loadFXML(String fxml) throws Exception {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml));
-        Parent parent = loader.load();
-        Object controller =loader.getController();
-        if(controller!= null){
-            parent.getProperties().put("controller", loader.getController());
-        }
-        return parent;
     }
 
     public static void main(String[] args) {

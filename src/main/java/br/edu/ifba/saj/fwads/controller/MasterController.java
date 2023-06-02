@@ -68,9 +68,14 @@ public class MasterController {
     }
 
     @FXML
-    void showAutores(ActionEvent event) {
+    void showCadAutores(ActionEvent event) {
         limparBotoes(event.getSource());
         showFXMLFile("CadAutor.fxml");
+    }
+    @FXML
+    void showListAutores(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("ListAutor.fxml");
     }
 
     @FXML
