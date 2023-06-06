@@ -44,7 +44,6 @@ public class MasterController {
     void showHome(ActionEvent event) {
         limparBotoes(event.getSource());
         masterPane.setCenter(new Pane());
-
     }
 
     @FXML
@@ -70,6 +69,21 @@ public class MasterController {
     void showCadAutores(ActionEvent event) {
         limparBotoes(event.getSource());
         showFXMLFile("CadAutor.fxml");
+    }
+    @FXML
+    void showCadAlunos(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("CadAluno.fxml");
+    }
+    @FXML
+    void showCadProfessores(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("CadProfessor.fxml");
+    }
+    
+    @FXML
+    void showSolicitaEmprestimo(ActionEvent event) {
+
     }
     @FXML
     void showListAutores(ActionEvent event) {

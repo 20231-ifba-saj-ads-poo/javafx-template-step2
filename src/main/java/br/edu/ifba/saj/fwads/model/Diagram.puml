@@ -1,0 +1,13 @@
+class UsuarioBiblioteca{
+    - String CPF
+    - String nome
+    - List<Livro> mochila
+    - int limite;
+    + boolean mochilaCheia()
+}
+class Aluno extends UsuarioBiblioteca{
+    - String matricula
+}
+class Professor extends UsuarioBiblioteca{
+    - String SIAPE
+}

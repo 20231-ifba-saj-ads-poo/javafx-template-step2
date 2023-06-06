@@ -2,7 +2,6 @@ package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.Biblioteca;
 import br.edu.ifba.saj.fwads.model.Autor;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -18,14 +17,19 @@ public class CadAutorController {
 
     @FXML
     private void salvarAutor() {
-        Autor novoAutor = new Autor(txNome.getText(),
-                    txEmail.getText(), 
+        if (txNome.getText().isEmpty() || txEmail.getText().isEmpty() || txCPF.getText().isEmpty()) {
+            new Alert(AlertType.INFORMATION, "Dados obrigatórios não informados").showAndWait();
+        } else {
+            Autor novoAutor = new Autor(txNome.getText(),
+                    txEmail.getText(),
                     txCPF.getText());
-        new Alert(AlertType.INFORMATION, 
-        "Cadastrando Autor:"+novoAutor.getNome()).showAndWait();
-        Biblioteca.listaAutores.add(novoAutor);
-        limparTela();
+            new Alert(AlertType.INFORMATION,
+                    "Cadastrando Autor:" + novoAutor.getNome()).showAndWait();
+            Biblioteca.listaAutores.add(novoAutor);
+            limparTela();
+        }
     }
+
     @FXML
     private void limparTela() {
         txNome.setText("");
