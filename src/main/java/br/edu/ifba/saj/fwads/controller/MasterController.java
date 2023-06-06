@@ -1,6 +1,7 @@
 package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.App;
+import javafx.css.PseudoClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,15 +56,13 @@ public class MasterController {
     private void limparBotoes(Object source) {
         menu.getChildren().forEach((node) -> {
             if (node instanceof Button btn) {
-                btn.getStyleClass().clear();
-                btn.getStyleClass().add("btn-menu");
+                node.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);                
             }
         }
 
         );
         if (source instanceof Button btn) {
-            btn.getStyleClass().clear();
-            btn.getStyleClass().add("btn-menu-selected");
+            btn.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
         }
     }
 
