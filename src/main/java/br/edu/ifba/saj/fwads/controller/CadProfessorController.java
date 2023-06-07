@@ -1,9 +1,7 @@
 package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.Biblioteca;
-import br.edu.ifba.saj.fwads.model.Autor;
 import br.edu.ifba.saj.fwads.model.Professor;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;

@@ -22,7 +22,10 @@ public class MasterController {
     private BorderPane masterPane;
 
     @FXML
-    private VBox menu;
+    private VBox menuCadastro;
+
+    @FXML
+    private VBox menuLista;
 
     @FXML
     private Label userEmail;
@@ -53,13 +56,18 @@ public class MasterController {
     }
 
     private void limparBotoes(Object source) {
-        menu.getChildren().forEach((node) -> {
+        menuCadastro.getChildren().forEach((node) -> {
             if (node instanceof Button btn) {
                 node.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);                
             }
-        }
-
-        );
+        });
+        
+        menuLista.getChildren().forEach((node) -> {
+            if (node instanceof Button btn) {
+                node.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);                
+            }
+        });
+        
         if (source instanceof Button btn) {
             btn.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
         }

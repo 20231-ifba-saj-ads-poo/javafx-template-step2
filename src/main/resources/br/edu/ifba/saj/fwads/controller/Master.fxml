@@ -2,8 +2,10 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -32,128 +34,145 @@
          </children></AnchorPane>
    </top>
    <left>
-      <VBox fx:id="menu" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="500.0" prefWidth="245.0" styleClass="left" stylesheets="@assets/style.css" BorderPane.alignment="TOP_LEFT">
-         <children>
-            <Button alignment="TOP_LEFT" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showHome" prefHeight="35.0" styleClass="btn-menu-selected" stylesheets="@assets/style.css" text="Home" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/house.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCadAutores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Autores" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/reading-book.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showLivros" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Livros" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/study.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showListAutores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Autores" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/reading-book.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Livros" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/study.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCadAlunos" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Alunos" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/reading-book.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCadProfessores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Professores" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/reading-book.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSolicitaEmprestimo" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Solicitar Emprestimo" textFill="WHITE">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" />
-               </padding>
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/reading-book.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-         </children></VBox>
+      <Accordion prefHeight="500.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" stylesheets="@assets/style.css" text="Cadastros">
+               <content>
+                  <VBox fx:id="menuCadastro" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="500.0" prefWidth="245.0" styleClass="left" stylesheets="@assets/style.css">
+                     <children>
+                        <Button alignment="TOP_LEFT" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showHome" prefHeight="35.0" styleClass="btn-menu-selected" stylesheets="@assets/style.css" text="Home" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/house.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCadAutores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Autores" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/reading-book.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showLivros" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Livros" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/study.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCadAlunos" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Alunos" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/reading-book.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showCadProfessores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Professores" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/reading-book.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSolicitaEmprestimo" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Emprestimo" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/reading-book.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" text="Listas">
+               <content>
+                  <VBox fx:id="menuLista" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="500.0" prefWidth="245.0" styleClass="left" stylesheets="@assets/style.css">
+                     <children>
+                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showListAutores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Autores" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/reading-book.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Livros" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/study.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
    </left>
 </BorderPane>

@@ -1,97 +1,135 @@
 .top {
-    -fx-background-color: green;
+  -fx-background-color: green;
 }
 
 .main {
-    -fx-background-color: lightgreen;
-
+  -fx-background-color: lightgreen;
 }
 
 .left {
-    -fx-background-color: green;
-
+  -fx-background-color: green;
 }
 
 .bottom {
-    -fx-background-color: green;
+  -fx-background-color: green;
 }
 
-
-
 .btn-login {
-    -fx-background-color: green;
-    -fx-background-radius: 25px;
+  -fx-background-color: green;
+  -fx-background-radius: 25px;
 }
 
 .btn-login:hover {
-    -fx-background-color: lightgreen;
+  -fx-background-color: lightgreen;
 }
 
 .btn-cancelar:pressed {
-    -fx-background-color: darkgreen;
+  -fx-background-color: darkgreen;
 }
 
 .btn-cancelar {
-    -fx-background-color: rgb(12, 221, 221);
-    -fx-background-radius: 25px;
+  -fx-background-color: rgb(12, 221, 221);
+  -fx-background-radius: 25px;
 }
 
 .btn-cancelar:hover {
-    -fx-background-color: lightgreen;
+  -fx-background-color: lightgreen;
 }
 
 .btn-login:pressed {
-    -fx-background-color: darkgreen;
+  -fx-background-color: darkgreen;
 }
 
 .btn-menu:selected {
-    -fx-background-color: lightgreen;
-    -fx-background-radius: 0;
+  -fx-background-color: lightgreen;
+  -fx-background-radius: 0;
 }
 .btn-menu {
-    -fx-background-color: green;
-    -fx-background-radius: 0;
+  -fx-background-color: green;
+  -fx-background-radius: 0;
 }
 
 .btn-menu:hover {
-    -fx-background-color: lightgreen;
+  -fx-background-color: lightgreen;
 }
 
 .btn-menu:pressed {
-    -fx-background-color: darkgreen;
+  -fx-background-color: darkgreen;
 }
 
 .btn-toolbar {
-    -fx-background-color: lightgreen;
-    -fx-background-radius: 0;
-    -fx-background-radius: 15px;
-    -fx-border-radius: 15px;
+  -fx-background-color: lightgreen;
+  -fx-background-radius: 0;
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
 }
 
 .btn-toolbar:hover {
-    -fx-background-color: rgb(208, 255, 208);
+  -fx-background-color: rgb(208, 255, 208);
 }
 
 .btn-toolbar:pressed {
-    -fx-background-color: darkgreen;
+  -fx-background-color: darkgreen;
 }
 
-.avatar{
-    -fx-background-radius: 25px;
-    -fx-border-radius: 25px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
-    -fx-padding: 10;
-    -fx-background-color: firebrick;
+.avatar {
+  -fx-background-radius: 25px;
+  -fx-border-radius: 25px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+  -fx-padding: 10;
+  -fx-background-color: firebrick;
 }
 
 .google {
-    -fx-background-color:  lightgreen;
-    -fx-background-radius: 15px;
-    -fx-border-color: green;
-    -fx-border-radius: 15px;
-    -fx-border-width:  1px;    
+  -fx-background-color: lightgreen;
+  -fx-background-radius: 15px;
+  -fx-border-color: green;
+  -fx-border-radius: 15px;
+  -fx-border-width: 1px;
 }
 
 .erro-class {
-    -fx-background-color:  red;
+  -fx-background-color: red;
+}
+
+.titled-pane {
+  -fx-skin: "com.sun.javafx.scene.control.skin.TitledPaneSkin";
+  -fx-text-fill: -fx-text-base-color;
+}
+.titled-pane:focused {
+  -fx-text-fill: white;
+}
+.titled-pane > .title {
+  -fx-font-size: 16px;
+  -fx-color: darkgreen;
+}
+
+.titled-pane:focused > .title {
+  -fx-color: lightgreen;
+}
+
+.titled-pane > .title > .arrow-button {
+  -fx-background-color: null;
+  -fx-background-insets: 0;
+  -fx-background-radius: 0;
+  -fx-padding: 0em 0.25em 0em 0em; /* 0 3 0 0 */
+}
+
+.titled-pane > .title > .arrow-button .arrow {
+  -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+  -fx-background-insets: 1 0 -1 0, 0;
+  -fx-padding: 0.25em 0.3125em 0.25em 0.3125em; /* 3 3.75 3 3.75 */
+  -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+
+.titled-pane:collapsed > .title > .arrow-button .arrow {
+  -fx-rotate: -90;
+}
+
+.titled-pane > *.content {
+  -fx-padding: 0;
+}
+
+.titled-pane:focused > .title > .arrow-button .arrow {
+  -fx-background-color: white;
 }
